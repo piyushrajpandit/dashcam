@@ -4,7 +4,9 @@
    ============================================================ */
 
 // ── Configuration ──────────────────────────────────────────
-const SERVER_URL = `${location.protocol}//${location.hostname}:5000`;
+// Use the same host+port the page was served from — works for any port
+const SERVER_URL = `${location.protocol}//${location.host}`;
+
 
 // ── State ──────────────────────────────────────────────────
 let socket = null;
